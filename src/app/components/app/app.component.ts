@@ -8,10 +8,6 @@ import {About} from '../about/about.component';
 import {Home} from '../home/home.component';
 import {AppState} from '../../services/app.service';
 
-/*
- * App Component
- * Top Level Component
- */
 @Component({
     selector: 'app',
     pipes: [],
@@ -22,9 +18,7 @@ import {AppState} from '../../services/app.service';
     template: require('./app.template.html'),
 })
 @RouteConfig([
-    { path: '/', name: 'Index', component: Home, useAsDefault: true },
-    { path: '/home', name: 'Home', component: Home },
-    // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
+    { path: '/home', name: 'Home', component: Home, useAsDefault: true },
     { path: '/about', name: 'About', component: About },
 ])
 export class App {
@@ -36,7 +30,6 @@ export class App {
     ngOnInit() {
         console.log('Initial App State', this.appState.state);
     }
-
 }
 
 /*
