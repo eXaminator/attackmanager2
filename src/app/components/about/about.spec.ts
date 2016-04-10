@@ -1,10 +1,10 @@
 import {
-  it,
-  inject,
-  injectAsync,
-  describe,
-  beforeEachProviders,
-  TestComponentBuilder
+    it,
+    inject,
+    injectAsync,
+    describe,
+    beforeEachProviders,
+    TestComponentBuilder,
 } from 'angular2/testing';
 
 import {Component, provide} from 'angular2/core';
@@ -13,17 +13,17 @@ import {Component, provide} from 'angular2/core';
 import {About} from './about.component';
 
 describe('About', () => {
-  // provide our implementations or mocks to the dependency injector
-  beforeEachProviders(() => [
-    About
-  ]);
+    // provide our implementations or mocks to the dependency injector
+    beforeEachProviders(() => [
+        About
+    ]);
 
-  it('should log ngOnInit', inject([ About ], (about) => {
-    spyOn(console, 'log');
-    expect(console.log).not.toHaveBeenCalled();
+    it('should log ngOnInit', inject([About], (about) => {
+        spyOn(console, 'log');
+        expect(console.log).not.toHaveBeenCalled();
 
-    about.ngOnInit();
-    expect(console.log).toHaveBeenCalled();
-  }));
+        about.ngOnInit();
+        expect(console.log).toHaveBeenCalled();
+    }));
 
 });
