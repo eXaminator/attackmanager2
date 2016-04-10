@@ -6,7 +6,6 @@ import {RouteConfig, Router} from 'angular2/router';
 
 import {About} from '../about/about.component';
 import {Home} from '../home/home.component';
-import {RouterActive} from '../../directives/router-active/router-active.directive';
 import {AppState} from '../../services/app.service';
 
 /*
@@ -17,7 +16,7 @@ import {AppState} from '../../services/app.service';
     selector: 'app',
     pipes: [],
     providers: [AppState],
-    directives: [RouterActive],
+    directives: [],
     encapsulation: ViewEncapsulation.None,
     styles: [require('./app.style.scss')],
     template: require('./app.template.html'),
