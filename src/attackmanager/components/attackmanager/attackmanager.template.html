@@ -1,0 +1,14 @@
+<md-toolbar color="primary">
+    <span>Text</span>
+    <span class="flex"></span>
+    <nav>
+        <ul class="menu material-icons">
+            <li class="item"><md-icon-button [routerLink]="['Attacks']" class="button">gavel</md-icon-button></li>
+            <li class="item"><md-icon-button class="button">person</md-icon-button></li>
+        </ul>
+    </nav>
+</md-toolbar>
+
+<main class="content layout-padding">
+    <router-outlet></router-outlet>
+</main>

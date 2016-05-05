@@ -58,10 +58,6 @@ function packageSort(packages) {
         // a must be equal to b
         return 0;
     }
-<<<<<<< HEAD
-=======
-  }
->>>>>>> upstream/master
 }
 
 function reverse(arr) {

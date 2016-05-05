@@ -40,14 +40,9 @@
     "pree2e": "npm run webdriver:update -- --standalone",
     "e2e": "npm run protractor",
     "e2e:live": "npm run e2e -- --elementExplorer",
-<<<<<<< HEAD
-    "test": "node --max-old-space-size=4096 node_modules/karma/bin/karma start",
-    "ci": "npm run e2e && npm run test",
-=======
     "pretest": "npm run lint",
     "test": "karma start",
     "ci": "npm test && npm run e2e",
->>>>>>> upstream/master
     "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./src/",
     "start": "npm run server:dev",
     "start:hmr": "npm run server:dev:hmr",
@@ -83,18 +78,11 @@
     "zone.js": "~0.6.12"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "angular2-hmr": "~0.5.5",
-    "awesome-typescript-loader": "~0.16.2",
-    "codelyzer": "0.0.12",
-    "compression-webpack-plugin": "^0.3.0",
-=======
     "angular2-hmr": "~0.6.0",
     "awesome-typescript-loader": "~0.17.0",
     "codelyzer": "~0.0.19",
     "compression-webpack-plugin": "^0.3.1",
     "copy-webpack-plugin": "^2.1.3",
->>>>>>> upstream/master
     "css-loader": "^0.23.1",
     "es6-promise": "^3.1.2",
     "es6-promise-loader": "^1.0.1",
@@ -104,11 +92,7 @@
     "expose-loader": "^0.7.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
-<<<<<<< HEAD
-    "html-webpack-plugin": "^2.9.0",
-=======
     "html-webpack-plugin": "^2.15.0",
->>>>>>> upstream/master
     "http-server": "^0.9.0",
     "imports-loader": "^0.6.5",
     "istanbul-instrumenter-loader": "^0.2.0",
@@ -121,29 +105,14 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "1.7.0",
-<<<<<<< HEAD
-    "node-sass": "^3.4.2",
-    "parse5": "^1.3.2",
-=======
     "node-sass": "^3.7.0",
     "parse5": "^2.1.5",
->>>>>>> upstream/master
     "phantomjs-polyfill": "0.0.2",
     "phantomjs-prebuilt": "^2.1.7",
     "protractor": "^3.2.2",
     "raw-loader": "0.5.1",
     "remap-istanbul": "^0.6.3",
     "rimraf": "^2.5.2",
-<<<<<<< HEAD
-    "rxjs": "^5.0.0-beta.2",
-    "sass-loader": "^3.2.0",
-    "source-map-loader": "^0.1.5",
-    "style-loader": "^0.13.0",
-    "to-string-loader": "^1.1.3",
-    "ts-helper": "0.0.1",
-    "ts-node": "^0.7.0",
-    "tslint": "^3.6.0",
-=======
     "sass-loader": "^3.2.0",
     "source-map-loader": "^0.1.5",
     "style-loader": "^0.13.1",
@@ -151,7 +120,6 @@
     "ts-helpers": "1.1.1",
     "ts-node": "^0.7.1",
     "tslint": "^3.7.1",
->>>>>>> upstream/master
     "tslint-loader": "^2.1.3",
     "typedoc": "^0.3.12",
     "typescript": "~1.8.9",

@@ -30,14 +30,9 @@ var testing = require('@angular/core/testing');
 var browser = require('@angular/platform-browser-dynamic/testing');
 
 testing.setBaseTestProviders(
-<<<<<<< HEAD
-    browser.TEST_BROWSER_PLATFORM_PROVIDERS,
-    browser.TEST_BROWSER_APPLICATION_PROVIDERS);
-=======
   browser.TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
   browser.TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS
 );
->>>>>>> upstream/master
 
 Object.assign(global, testing);
 

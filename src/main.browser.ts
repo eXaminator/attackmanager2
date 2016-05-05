@@ -13,11 +13,7 @@ import {ENV_PROVIDERS} from './platform/environment';
 * App Component
 * our top level component that holds all of our components
 */
-<<<<<<< HEAD
-import {App} from './app/components/app/app.component';
-=======
 import {AppComponent, APP_PROVIDERS} from './app';
->>>>>>> upstream/master
 
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
@@ -25,15 +21,6 @@ import {AppComponent, APP_PROVIDERS} from './app';
  */
 export function main(initialHmrState?: any): Promise<any> {
 
-<<<<<<< HEAD
-  return bootstrap(App, [
-    ...ENV_PROVIDERS,
-    ...PROVIDERS,
-    ...DIRECTIVES,
-    ...PIPES,
-  ])
-  .catch(err => console.error(err));
-=======
     return bootstrap(AppComponent, [
         ...PROVIDERS,
         ...ENV_PROVIDERS,
@@ -42,7 +29,6 @@ export function main(initialHmrState?: any): Promise<any> {
         ...APP_PROVIDERS,
     ])
         .catch(err => console.error(err));
->>>>>>> upstream/master
 
 }
 
