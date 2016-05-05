@@ -1,6 +1,7 @@
 /*
  * Angular 2 decorators and services
  */
+<<<<<<< HEAD
 import {Component, ViewEncapsulation} from 'angular2/core';
 import {RouteConfig, Router} from 'angular2/router';
 
@@ -30,6 +31,44 @@ export class App {
     ngOnInit() {
         console.log('Initial App State', this.appState.state);
     }
+=======
+import {Component, ViewEncapsulation} from '@angular/core';
+import {RouteConfig, Router} from '@angular/router-deprecated';
+
+import {HomeComponent} from '../home';
+import {AboutComponent} from '../about';
+
+/*
+ * App Component
+ * Top Level Component
+ */
+@Component({
+    selector: 'app',
+    pipes: [],
+    providers: [],
+    directives: [],
+    encapsulation: ViewEncapsulation.None,
+    styles: [
+        require('normalize.css'),
+        require('./app.scss'),
+    ],
+    template: require('./app.html'),
+})
+@RouteConfig([
+    {path: '/', name: 'Index', component: HomeComponent, useAsDefault: true},
+    {path: '/about', name: 'About', component: AboutComponent},
+])
+export class AppComponent {
+    angularclassLogo = 'assets/img/angularclass-avatar.png';
+    loading = false;
+    name = 'Angular 2 Webpack Starter';
+    url = 'https://twitter.com/AngularClass';
+
+    ngOnInit() {
+        console.log('Initial App State');
+    }
+
+>>>>>>> upstream/master
 }
 
 /*

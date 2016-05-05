@@ -1,5 +1,8 @@
-var path = require('path');
+/**
+ * @author: @AngularClass
+ */
 
+var path = require('path');
 
 // Helper functions
 var _root = path.resolve(__dirname, '..');
@@ -55,6 +58,10 @@ function packageSort(packages) {
         // a must be equal to b
         return 0;
     }
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> upstream/master
 }
 
 function reverse(arr) {

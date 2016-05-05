@@ -1,7 +1,7 @@
 /*
  * Providers provided by Angular
  */
-import {bootstrap} from 'angular2/platform/browser';
+import {bootstrap} from '@angular/platform-browser-dynamic';
 /*
 * Platform and Environment
 * our providers/directives/pipes
@@ -13,7 +13,11 @@ import {ENV_PROVIDERS} from './platform/environment';
 * App Component
 * our top level component that holds all of our components
 */
+<<<<<<< HEAD
 import {App} from './app/components/app/app.component';
+=======
+import {AppComponent, APP_PROVIDERS} from './app';
+>>>>>>> upstream/master
 
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
@@ -21,6 +25,7 @@ import {App} from './app/components/app/app.component';
  */
 export function main(initialHmrState?: any): Promise<any> {
 
+<<<<<<< HEAD
   return bootstrap(App, [
     ...ENV_PROVIDERS,
     ...PROVIDERS,
@@ -28,6 +33,16 @@ export function main(initialHmrState?: any): Promise<any> {
     ...PIPES,
   ])
   .catch(err => console.error(err));
+=======
+    return bootstrap(AppComponent, [
+        ...PROVIDERS,
+        ...ENV_PROVIDERS,
+        ...DIRECTIVES,
+        ...PIPES,
+        ...APP_PROVIDERS,
+    ])
+        .catch(err => console.error(err));
+>>>>>>> upstream/master
 
 }
 
@@ -48,10 +63,10 @@ export function main(initialHmrState?: any): Promise<any> {
  * experimental version by @gdi2290
  */
 if ('development' === ENV && HMR === true) {
-  // activate hot module reload
-  let ngHmr = require('angular2-hmr');
-  ngHmr.hotModuleReplacement(main, module);
+    // activate hot module reload
+    let ngHmr = require('angular2-hmr');
+    ngHmr.hotModuleReplacement(main, module);
 } else {
-  // bootstrap when documetn is ready
-  document.addEventListener('DOMContentLoaded', () => main());
+    // bootstrap when documetn is ready
+    document.addEventListener('DOMContentLoaded', () => main());
 }

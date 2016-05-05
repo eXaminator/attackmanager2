@@ -4,9 +4,22 @@ describe('App', () => {
         browser.get('/');
     });
 
+<<<<<<< HEAD
     it('should have a title', () => {
         let subject = browser.getTitle();
         let result = 'Angular2 Webpack Starter by @gdi2990 from @AngularClass';
+=======
+
+    it('should have a title', () => {
+        let subject = browser.getTitle();
+        let result = 'Angular2 Webpack Starter by @gdi2290 from @AngularClass';
+        expect(subject).toEqual(result);
+    });
+
+    it('should have <header>', () => {
+        let subject = element(by.css('app header')).isPresent();
+        let result = true;
+>>>>>>> upstream/master
         expect(subject).toEqual(result);
     });
 
@@ -21,4 +34,8 @@ describe('App', () => {
         let result = 'WebPack Angular 2 Starter by @AngularClass';
         expect(subject).toEqual(result);
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 });
