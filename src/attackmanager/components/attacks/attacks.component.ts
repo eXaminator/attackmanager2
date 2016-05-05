@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input} from '@angular/core';
 import {Character} from '../../models';
 
 interface Attack {
@@ -7,14 +7,13 @@ interface Attack {
 
 @Component({
     selector: 'attacks',
-    template: require('./attacks.template.html'),
-    styles: [require('./attacks.template.html')],
+    template: require('./attacks.html'),
+    // styles: [require('./attacks.scss')],
 })
 export class AttacksComponent {
-    @Input() character: Character = null;
 
     ngOnChanges() {
-        console.log('init', this.character);
+        console.log('init');
     }
 
     get attacks() {

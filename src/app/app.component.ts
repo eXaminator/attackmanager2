@@ -1,22 +1,14 @@
-/*
- * Angular 2 decorators and services
- */
-import {Component, ViewEncapsulation} from 'angular2/core';
-import {RouteConfig} from 'angular2/router';
-import {AttackmanagerComponent} from '../attackmanager/components/attackmanager/attackmanager.component';
+import {Component, ViewEncapsulation} from '@angular/core';
+import {RouteConfig} from '@angular/router-deprecated';
+import {AttackmanagerComponent} from '../attackmanager/components/attackmanager';
 
 @Component({
     selector: 'app',
-    encapsulation: ViewEncapsulation.None,
-    styles: [require('./app.style.scss')],
     template: `<router-outlet></router-outlet>`,
+    styles: [require('normalize.css')],
+    encapsulation: ViewEncapsulation.None,
 })
 @RouteConfig([
-    {
-        path: '/...',
-        name: 'AttackManager',
-        component: AttackmanagerComponent,
-        useAsDefault: true
-    },
+  {path: '/...', component: AttackmanagerComponent},
 ])
 export class AppComponent {}
