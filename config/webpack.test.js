@@ -131,21 +131,49 @@ module.exports = {
        */
       { test: /\.json$/, loader: 'json-loader', exclude: [helpers.root('src/index.html')] },
 
-      /**
-       * Raw loader support for *.css files
-       * Returns file content as string
-       *
+      /*
        * See: https://github.com/webpack/raw-loader
        */
-      { test: /\.css$/, loader: 'raw-loader', exclude: [helpers.root('src/index.html')] },
+      {
+          test: /\.css$/,
+          loaders: [
+              'to-string',
+              'css',
+          ]
+      },
 
-      /**
-       * Raw loader support for *.html
+      /*
+       * See: https://github.com/webpack/raw-loader
+       */
+      {
+          test: /\.scss$/,
+          loaders: [
+              'to-string',
+              'css',
+              'sass',
+          ]
+      },
+
+      /* Raw loader support for *.html
        * Returns file content as string
        *
        * See: https://github.com/webpack/raw-loader
        */
-      { test: /\.html$/, loader: 'raw-loader', exclude: [helpers.root('src/index.html')] }
+      {
+          test: /\.html$/,
+          loader: 'html',
+          exclude: [helpers.root('src/index.html')]
+      },
+
+      /* Raw loader support for *.html
+       * Returns file content as string
+       *
+       * See: https://github.com/webpack/raw-loader
+       */
+      {
+          test: /\.(jpg|jpeg|png|gif|svg)/,
+          loader: 'file',
+      },
 
     ],
 

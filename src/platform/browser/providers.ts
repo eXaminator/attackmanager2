@@ -22,13 +22,13 @@ import {MATERIAL_PROVIDERS} from './angular2-material2';
 * providers/directives/pipes that only live in our browser environment
 */
 export const APPLICATION_PROVIDERS = [
-  ...FORM_PROVIDERS,
-  ...HTTP_PROVIDERS,
-  ...MATERIAL_PROVIDERS,
-  ...ROUTER_PROVIDERS,
-  {provide: LocationStrategy, useClass: HashLocationStrategy }
+    ...FORM_PROVIDERS,
+    ...HTTP_PROVIDERS,
+    ...MATERIAL_PROVIDERS,
+    ...ROUTER_PROVIDERS,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
 ];
 
 export const PROVIDERS = [
-  ...APPLICATION_PROVIDERS
+    ...APPLICATION_PROVIDERS,
 ];
